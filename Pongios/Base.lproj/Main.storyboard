@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,129 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pongios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="GYf-PS-QMP">
+                                <rect key="frame" x="19" y="670" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GYf-PS-QMP" id="Pd5-G2-bxo">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="6nu-Ao-DgW">
+                                <rect key="frame" x="188" y="825" width="39" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Meteo" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="86f-F6-fbC">
+                                <rect key="frame" x="87" y="64" width="240" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oeA-IT-mfY">
+                                <rect key="frame" x="8" y="148" width="398" height="428"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hKr-UZ-laW">
+                                        <rect key="frame" x="124" y="77" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="5nX-of-1RE"/>
+                                            <constraint firstAttribute="height" constant="150" id="EKe-pt-QBR"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="26°C" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rKt-YB-hcB">
+                                        <rect key="frame" x="81" y="272" width="242" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="pIf-4D-Oem"/>
+                                            <constraint firstAttribute="width" constant="242" id="ybf-3R-GoJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="40"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fa18fbc911311b5371870c880fa5f75a-location-pin-by-vexels" translatesAutoresizingMaskIntoConstraints="NO" id="o9t-mR-8LD">
+                                        <rect key="frame" x="88" y="339" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="dK5-FP-yH0"/>
+                                            <constraint firstAttribute="height" constant="40" id="iEv-A5-wqG"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="FRANCE, Paris" translatesAutoresizingMaskIntoConstraints="NO" id="vQe-il-oVj">
+                                        <rect key="frame" x="138" y="338" width="172" height="46"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="4j5-jg-heY"/>
+                                            <constraint firstAttribute="width" constant="172" id="mkm-ej-msd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="398" id="0z1-f5-lgE"/>
+                                    <constraint firstAttribute="height" constant="428" id="8RB-ZO-fpY"/>
+                                    <constraint firstItem="vQe-il-oVj" firstAttribute="centerY" secondItem="o9t-mR-8LD" secondAttribute="centerY" constant="2" id="9xi-pC-Xdk"/>
+                                    <constraint firstItem="vQe-il-oVj" firstAttribute="leading" secondItem="o9t-mR-8LD" secondAttribute="trailing" constant="10" id="BnA-8F-4KL"/>
+                                    <constraint firstItem="vQe-il-oVj" firstAttribute="leading" secondItem="rKt-YB-hcB" secondAttribute="leading" constant="57" id="NGS-gP-dnJ"/>
+                                    <constraint firstItem="hKr-UZ-laW" firstAttribute="centerX" secondItem="oeA-IT-mfY" secondAttribute="centerX" id="Rdk-dR-Ek6"/>
+                                    <constraint firstItem="rKt-YB-hcB" firstAttribute="centerX" secondItem="hKr-UZ-laW" secondAttribute="centerX" constant="3" id="T2B-mP-Tt3"/>
+                                    <constraint firstAttribute="bottom" secondItem="rKt-YB-hcB" secondAttribute="bottom" constant="96" id="YDG-RB-HqO"/>
+                                    <constraint firstItem="rKt-YB-hcB" firstAttribute="top" secondItem="hKr-UZ-laW" secondAttribute="bottom" constant="45" id="dvp-AL-tFm"/>
+                                    <constraint firstItem="vQe-il-oVj" firstAttribute="top" secondItem="rKt-YB-hcB" secondAttribute="bottom" constant="6" id="yp8-OK-38f"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oeA-IT-mfY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-86" id="2a6-eu-Kkj"/>
+                            <constraint firstItem="oeA-IT-mfY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SCl-8L-uqg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="city" destination="vQe-il-oVj" id="JAd-1q-eFb"/>
+                        <outlet property="temp" destination="rKt-YB-hcB" id="avX-Ir-Cxi"/>
+                        <outlet property="weatherImage" destination="hKr-UZ-laW" id="cPL-Kg-rqw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="26.116071428571427"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="RLT-Qz-xSR">
+            <objects>
+                <tableViewController id="acg-v0-Pvi" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1cC-lc-ycK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="mPt-aN-DVf">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mPt-aN-DVf" id="w4k-YR-qRy">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="acg-v0-Pvi" id="Qvs-si-BR9"/>
+                            <outlet property="delegate" destination="acg-v0-Pvi" id="eeg-hP-slt"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hBS-xF-HbY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="fa18fbc911311b5371870c880fa5f75a-location-pin-by-vexels" width="512" height="512"/>
+    </resources>
 </document>

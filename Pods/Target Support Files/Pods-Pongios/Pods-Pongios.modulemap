@@ -1,0 +1,6 @@
+framework module Pods_Pongios {
+  umbrella header "Pods-Pongios-umbrella.h"
+
+  export *
+  module * { export * }
+}
