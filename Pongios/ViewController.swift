@@ -11,7 +11,7 @@ import Alamofire
 import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate{
-    var WEATHER_IMG = [
+    let WEATHER_IMG = [
         "clear sky": "summer.png",
         "few clouds": "cloud.png",
         "scattered clouds": "cloud.png",
