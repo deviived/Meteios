@@ -94,6 +94,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
         alert.message = "Why do you do this ? Whyyyyyyyy ? \u{1F622}\u{1F622}\u{1F622}\u{1F622}"
         present(alert, animated: true) {
             DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                self.dismiss(animated: true, completion: nil)
                 guard let url = URL(string: UIApplication.openSettingsURLString) else {
                     return
                 }
