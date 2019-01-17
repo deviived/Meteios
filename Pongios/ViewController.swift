@@ -14,6 +14,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     
     let locManager = CLLocationManager()
     var image: UIImage?
+    
+    let WEATHER_IMG = [
+        "Rain": "rainy.png",
+        "Clouds": "cloud.png",
+        "Thunderstorm": "lightning.png",
+        "Snow": "snow.png",
+        "Drizzle": "misty.png"
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +41,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
             .responseJSON { response in
                 //print(response)
                 
-                if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                if let data = response.data, let _ = String(data: data, encoding: .utf8) {
                     
                     do {
                         let dict = try JSONSerialization.jsonObject(with: data, options: []) as? [String:AnyObject]
@@ -48,63 +56,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
                             if let myCity = myDictionary["name"] as? String {
                                 self.city.text = "\(myCity)"
                             }
+                            
                             if let weather = myDictionary["weather"] as? [[String: Any]] {
-                                if let weather_item = weather[0]["description"] as? String {
-                                    //print(weather_item)
-                                    //self.etatClimat.text = "->\(weather_item)"
-                                    switch weather_item {
-                                    case "clear sky":
-                                        let imageName = "summer.png"
-                                        self.image = UIImage(named: imageName)
-                                        self.weatherImage.image = self.image
-                                        break
-                                    case "few clouds":
-                                        let imageName = "cloud.png"
-                                        self.image = UIImage(named: imageName)
-                                        self.weatherImage.image = self.image
-                                        break
-                                    case "scattered clouds":
-                                        let imageName = "cloud.png"
-                                        self.image = UIImage(named: imageName)
-                                        self.weatherImage.image = self.image
-                                        break
-                                    case "broken clouds":
-                                        let imageName = "cloudy-night.png"
-                                        self.image = UIImage(named: imageName)
-                                        self.weatherImage.image = self.image
-                                        break
-                                    case "shower rain":
-                                        let imageName = "rainy.png"
-                                        self.image = UIImage(named: imageName)
-                                        self.weatherImage.image = self.image
-                                        break
-                                    case "rain":
-                                        let imageName = "rainy.png"
-                                        self.image = UIImage(named: imageName)
-                                        self.weatherImage.image = self.image
-                                        break
-                                    case "thunderstorm":
-                                        let imageName = "lightning.png"
-                                        self.image = UIImage(named: imageName)
-                                        self.weatherImage.image = self.image
-                                        break
-                                    case "snow":
-                                        let imageName = "snow.png"
-                                        self.image = UIImage(named: imageName)
-                                        self.weatherImage.image = self.image
-                                        break
-                                    case "mist":
-                                        let imageName = "misty.png"
-                                        self.image = UIImage(named: imageName)
-                                        self.weatherImage.image = self.image
-                                        break
-                                    default:
-                                        let imageName = "summer.png"
-                                        self.image = UIImage(named: imageName)
-                                        self.weatherImage.image = self.image
-                                        break;
+                                if let weather_item = weather[0]["main"] as? String {
+                                    print(weather_item)
+                                    var imgName = "summer.png"
+                                    if let kExist = self.WEATHER_IMG[weather_item] {
+                                        imgName = self.WEATHER_IMG[weather_item]!
                                     }
+                                    self.image = UIImage(named: imgName)
+                                    self.weatherImage.image = self.image
+                                    
                                 }
+                                
                             }
                         }
                         
@@ -120,7 +84,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
         
         let loc = locations.last!
         
-        print("\(loc.coordinate.latitude) \(loc.coordinate.longitude)")
+        //print("\(loc.coordinate.latitude) \(loc.coordinate.longitude)")
         callApi(long: loc.coordinate.longitude, lat: loc.coordinate.latitude)
     }
     
