@@ -87,6 +87,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
         
         alert.title = "Angry react only \u{1F621}"
         alert.message = "Why do you do this ? Whyyyyyyyy ? \u{1F622}\u{1F622}\u{1F622}\u{1F622}"
+        
+        if let popover = alert.popoverPresentationController {
+            popover.sourceView = self.view
+            popover.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+            popover.permittedArrowDirections = []
+        }
+        
         present(alert, animated: true) {
             DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                 self.dismiss(animated: true, completion: nil)
