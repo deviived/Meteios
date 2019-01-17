@@ -117,10 +117,10 @@
             </objects>
             <point key="canvasLocation" x="960.86956521739137" y="25.446428571428569"/>
         </scene>
-        <!--Table View Controller-->
+        <!--My List Table View Controller-->
         <scene sceneID="RLT-Qz-xSR">
             <objects>
-                <tableViewController id="acg-v0-Pvi" sceneMemberID="viewController">
+                <tableViewController id="acg-v0-Pvi" customClass="myListTableViewController" customModule="Pongios" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1cC-lc-ycK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,31 +129,22 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="42" id="mPt-aN-DVf" customClass="Example1Cell" customModule="Pongios" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="42"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mPt-aN-DVf" id="w4k-YR-qRy">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mPt-aN-DVf" id="w4k-YR-qRy" customClass="Example1Cell" customModule="Pongios" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="41.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="QUI AIMES LE COUSCOUS ?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qYL-7O-zyh">
-                                            <rect key="frame" x="51.5" y="4.5" width="311" height="33"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <accessibility key="accessibilityConfiguration">
-                                                <accessibilityTraits key="traits" staticText="YES"/>
-                                            </accessibility>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="311" id="f0q-0j-fi1"/>
-                                                <constraint firstAttribute="height" constant="33" id="lSz-Ry-vlk"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        </textView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSe-VS-BHH">
+                                            <rect key="frame" x="145" y="11" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="qYL-7O-zyh" firstAttribute="centerY" secondItem="w4k-YR-qRy" secondAttribute="centerY" id="rw8-PG-wiF"/>
-                                        <constraint firstItem="qYL-7O-zyh" firstAttribute="centerX" secondItem="w4k-YR-qRy" secondAttribute="centerX" id="tcD-OU-QxU"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="title" destination="qYL-7O-zyh" id="xAR-IW-I6E"/>
+                                    <outlet property="label" destination="w4k-YR-qRy" id="mYD-3P-04W"/>
+                                    <outlet property="title" destination="w4k-YR-qRy" id="wIi-J4-a91"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
