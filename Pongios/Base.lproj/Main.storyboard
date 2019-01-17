@@ -126,7 +126,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="42" id="mPt-aN-DVf" customClass="Example1Cell" customModule="Pongios" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="smogo" rowHeight="42" id="mPt-aN-DVf" customClass="Example1Cell" customModule="Pongios" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="42"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mPt-aN-DVf" id="w4k-YR-qRy" customClass="Example1Cell" customModule="Pongios" customModuleProvider="target">
@@ -149,8 +149,8 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="acg-v0-Pvi" id="Qvs-si-BR9"/>
-                            <outlet property="delegate" destination="acg-v0-Pvi" id="eeg-hP-slt"/>
+                            <outlet property="dataSource" destination="acg-v0-Pvi" id="vRZ-Vy-oWH"/>
+                            <outlet property="delegate" destination="acg-v0-Pvi" id="sG7-Qa-rQz"/>
                         </connections>
                     </tableView>
                 </tableViewController>

@@ -8,8 +8,9 @@
 
 import UIKit
 
-class myListTableViewController: UITableViewController {
+class myListTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Uncomment the following line to preserve selection between presentations
@@ -21,24 +22,25 @@ class myListTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    /*override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
-    }
+    }*/
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 2
     }
 
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as? Example1Cell
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        /*guard let cell = tableView.dequeueReusableCell(withIdentifier: "smogo", for: indexPath) as? Example1Cell
             
         else{
             fatalError("ERROR SYSTEM!!!!")
         }
-        
+        */
+        let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "smogo")
         cell.textLabel?.text = "test"
         // Configure the cell...
 
@@ -95,5 +97,4 @@ class myListTableViewController: UITableViewController {
 
 class Example1Cell: UITableViewCell {
     
-    @IBOutlet weak var label: Example1Cell!
 }
