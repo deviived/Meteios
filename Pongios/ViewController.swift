@@ -57,7 +57,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
                             if let weather = myDictionary["weather"] as? [[String: Any]] {
                                 if let weather_item = weather[0]["main"] as? String {
                                     var imgName = "summer.png"
-                                    if let kExist = self.WEATHER_IMG[weather_item] {
+                                    if let _ = self.WEATHER_IMG[weather_item] {
                                         imgName = self.WEATHER_IMG[weather_item]!
                                     }
                                     self.image = UIImage(named: imgName)
