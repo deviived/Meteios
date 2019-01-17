@@ -88,3 +88,7 @@ class myListTableViewController: UITableViewController {
     */
 
 }
+
+class Example1Cell: UITableViewCell {
+    @IBOutlet weak var title: UITextView!
+}
