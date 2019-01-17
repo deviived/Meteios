@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BqK-ze-IIl">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Météo du jour-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pongios" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,7 +27,7 @@
                                             <constraint firstAttribute="height" constant="60" id="pIf-4D-Oem"/>
                                             <constraint firstAttribute="width" constant="242" id="ybf-3R-GoJ"/>
                                         </constraints>
-                                        <color key="textColor" red="0.094148613512516022" green="0.38900238275527954" blue="0.44223308563232422" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.22543569194681715" green="0.35841824730804461" blue="0.62355250634517767" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -71,16 +71,6 @@
                                     <constraint firstItem="vQe-il-oVj" firstAttribute="top" secondItem="rKt-YB-hcB" secondAttribute="bottom" constant="6" id="yp8-OK-38f"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Météo du jour" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="86f-F6-fbC">
-                                <rect key="frame" x="20" y="82" width="374" height="76"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="EAW-Ua-9q8"/>
-                                    <constraint firstAttribute="height" constant="76" id="YSw-bx-747"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="46"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="6nu-Ao-DgW">
                                 <rect key="frame" x="187.5" y="805" width="39" height="37"/>
                                 <constraints>
@@ -93,6 +83,17 @@
                                     <segue destination="acg-v0-Pvi" kind="show" id="vXl-xi-IIm"/>
                                 </connections>
                             </pageControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Météo du jour" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="86f-F6-fbC">
+                                <rect key="frame" x="20" y="105" width="374" height="76"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="EAW-Ua-9q8"/>
+                                    <constraint firstAttribute="height" constant="76" id="YSw-bx-747"/>
+                                </constraints>
+                                <color key="textColor" red="0.13083402999350996" green="0.13056039678887255" blue="0.359394828680203" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="46"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -105,6 +106,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Météo du jour" id="6rI-ch-073"/>
                     <connections>
                         <outlet property="city" destination="vQe-il-oVj" id="JAd-1q-eFb"/>
                         <outlet property="temp" destination="rKt-YB-hcB" id="avX-Ir-Cxi"/>
@@ -113,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="51.798561151079141" y="25.899280575539571"/>
+            <point key="canvasLocation" x="960.86956521739137" y="25.446428571428569"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="RLT-Qz-xSR">
@@ -181,7 +183,25 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hBS-xF-HbY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="844.92753623188412" y="25.446428571428569"/>
+            <point key="canvasLocation" x="1755.072463768116" y="25.446428571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4y9-bX-SY6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BqK-ze-IIl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tXA-5o-KdV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aSS-2x-B84"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="biy-yD-Scl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="50.724637681159422" y="25.446428571428569"/>
         </scene>
     </scenes>
     <resources>
