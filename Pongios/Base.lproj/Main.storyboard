@@ -17,35 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="GYf-PS-QMP">
-                                <rect key="frame" x="19" y="670" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GYf-PS-QMP" id="Pd5-G2-bxo">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="6nu-Ao-DgW">
-                                <rect key="frame" x="188" y="825" width="39" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </pageControl>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Meteo" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="86f-F6-fbC">
-                                <rect key="frame" x="87" y="64" width="240" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oeA-IT-mfY">
-                                <rect key="frame" x="8" y="148" width="398" height="428"/>
+                                <rect key="frame" x="8" y="236" width="398" height="424"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hKr-UZ-laW">
-                                        <rect key="frame" x="124" y="77" width="150" height="150"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="5nX-of-1RE"/>
-                                            <constraint firstAttribute="height" constant="150" id="EKe-pt-QBR"/>
-                                        </constraints>
-                                    </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="26°C" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rKt-YB-hcB">
                                         <rect key="frame" x="81" y="272" width="242" height="60"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -53,10 +27,11 @@
                                             <constraint firstAttribute="height" constant="60" id="pIf-4D-Oem"/>
                                             <constraint firstAttribute="width" constant="242" id="ybf-3R-GoJ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="40"/>
+                                        <color key="textColor" red="0.094148613512516022" green="0.38900238275527954" blue="0.44223308563232422" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="48"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fa18fbc911311b5371870c880fa5f75a-location-pin-by-vexels" translatesAutoresizingMaskIntoConstraints="NO" id="o9t-mR-8LD">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="o9t-mR-8LD">
                                         <rect key="frame" x="88" y="339" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="dK5-FP-yH0"/>
@@ -70,29 +45,63 @@
                                             <constraint firstAttribute="height" constant="46" id="4j5-jg-heY"/>
                                             <constraint firstAttribute="width" constant="172" id="mkm-ej-msd"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" red="0.28020101328646191" green="0.54169875886604246" blue="0.71803616751269028" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hKr-UZ-laW">
+                                        <rect key="frame" x="106.5" y="40" width="185" height="185"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="185" id="5nX-of-1RE"/>
+                                            <constraint firstAttribute="height" constant="185" id="EKe-pt-QBR"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="398" id="0z1-f5-lgE"/>
-                                    <constraint firstAttribute="height" constant="428" id="8RB-ZO-fpY"/>
+                                    <constraint firstAttribute="width" constant="398" id="099-F3-dKE"/>
+                                    <constraint firstItem="hKr-UZ-laW" firstAttribute="centerX" secondItem="oeA-IT-mfY" secondAttribute="centerX" id="7d5-hk-KUV"/>
                                     <constraint firstItem="vQe-il-oVj" firstAttribute="centerY" secondItem="o9t-mR-8LD" secondAttribute="centerY" constant="2" id="9xi-pC-Xdk"/>
                                     <constraint firstItem="vQe-il-oVj" firstAttribute="leading" secondItem="o9t-mR-8LD" secondAttribute="trailing" constant="10" id="BnA-8F-4KL"/>
+                                    <constraint firstAttribute="height" constant="424" id="EEZ-he-Lva"/>
                                     <constraint firstItem="vQe-il-oVj" firstAttribute="leading" secondItem="rKt-YB-hcB" secondAttribute="leading" constant="57" id="NGS-gP-dnJ"/>
-                                    <constraint firstItem="hKr-UZ-laW" firstAttribute="centerX" secondItem="oeA-IT-mfY" secondAttribute="centerX" id="Rdk-dR-Ek6"/>
                                     <constraint firstItem="rKt-YB-hcB" firstAttribute="centerX" secondItem="hKr-UZ-laW" secondAttribute="centerX" constant="3" id="T2B-mP-Tt3"/>
-                                    <constraint firstAttribute="bottom" secondItem="rKt-YB-hcB" secondAttribute="bottom" constant="96" id="YDG-RB-HqO"/>
-                                    <constraint firstItem="rKt-YB-hcB" firstAttribute="top" secondItem="hKr-UZ-laW" secondAttribute="bottom" constant="45" id="dvp-AL-tFm"/>
+                                    <constraint firstItem="rKt-YB-hcB" firstAttribute="top" secondItem="hKr-UZ-laW" secondAttribute="bottom" constant="47" id="dvp-AL-tFm"/>
+                                    <constraint firstItem="hKr-UZ-laW" firstAttribute="top" secondItem="oeA-IT-mfY" secondAttribute="top" constant="40" id="pf2-Gi-QSV"/>
                                     <constraint firstItem="vQe-il-oVj" firstAttribute="top" secondItem="rKt-YB-hcB" secondAttribute="bottom" constant="6" id="yp8-OK-38f"/>
                                 </constraints>
                             </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Météo du jour" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="86f-F6-fbC">
+                                <rect key="frame" x="20" y="82" width="374" height="76"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="EAW-Ua-9q8"/>
+                                    <constraint firstAttribute="height" constant="76" id="YSw-bx-747"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="46"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="6nu-Ao-DgW">
+                                <rect key="frame" x="187.5" y="805" width="39" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="39" id="51c-p2-9jc"/>
+                                    <constraint firstAttribute="height" constant="37" id="72T-o7-16c"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" red="0.10014005750417709" green="0.45628762245178223" blue="0.69354146718978882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="acg-v0-Pvi" kind="show" id="vXl-xi-IIm"/>
+                                </connections>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="oeA-IT-mfY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-86" id="2a6-eu-Kkj"/>
-                            <constraint firstItem="oeA-IT-mfY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SCl-8L-uqg"/>
+                            <constraint firstItem="oeA-IT-mfY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3Ac-ob-5LW"/>
+                            <constraint firstItem="oeA-IT-mfY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9MU-AV-tdV"/>
+                            <constraint firstItem="86f-F6-fbC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LVN-HB-caa"/>
+                            <constraint firstItem="86f-F6-fbC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="i1T-MH-vFH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6nu-Ao-DgW" secondAttribute="bottom" constant="20" id="jKv-UX-N21"/>
+                            <constraint firstItem="6nu-Ao-DgW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z8g-1s-Blc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -104,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.173913043478265" y="26.116071428571427"/>
+            <point key="canvasLocation" x="51.798561151079141" y="25.899280575539571"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="RLT-Qz-xSR">
@@ -123,6 +132,46 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="101" id="GYf-PS-QMP">
+                                <rect key="frame" x="0.0" y="72" width="414" height="101"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GYf-PS-QMP" id="Pd5-G2-bxo">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="104" id="c45-Lc-jTn">
+                                <rect key="frame" x="0.0" y="173" width="414" height="104"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c45-Lc-jTn" id="klr-hW-lru">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="103.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="107" id="CMe-aq-GgF">
+                                <rect key="frame" x="0.0" y="277" width="414" height="107"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CMe-aq-GgF" id="4Nt-Wh-y1B">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="106.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="104" id="uLl-oB-3ta">
+                                <rect key="frame" x="0.0" y="384" width="414" height="104"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uLl-oB-3ta" id="WPY-T2-nq3">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="103.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="126" id="fpP-4v-Ngb">
+                                <rect key="frame" x="0.0" y="488" width="414" height="126"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fpP-4v-Ngb" id="scN-iB-frP">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="125.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="acg-v0-Pvi" id="Qvs-si-BR9"/>
@@ -132,9 +181,10 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hBS-xF-HbY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="844.92753623188412" y="25.446428571428569"/>
         </scene>
     </scenes>
     <resources>
-        <image name="fa18fbc911311b5371870c880fa5f75a-location-pin-by-vexels" width="512" height="512"/>
+        <image name="location" width="512" height="512"/>
     </resources>
 </document>
