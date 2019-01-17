@@ -54,26 +54,22 @@ class MeteoService{
     
     static fileprivate func collectMeteoData(_ data: [[String: Any]]) -> [String: [String: Int]] {
         var daysAndWeathers: [String: [String: Int]] = [String: [String: Int]]()
-        let dateFormatterInput = DateFormatter()
-        dateFormatterInput.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let dateFormatterOutput = DateFormatter()
         dateFormatterOutput.dateFormat = "EEEE"
         
         for item in data {
-            if let dateStr = item["dt_text"] as? String {
-                if let date = dateFormatterInput.date(from: dateStr) {
-                    let day = dateFormatterOutput.string(from: date)
-                
-                    if let weatherInfoList = item["weather"] as? [[String: Any]] {
-                        let weatherInfo = weatherInfoList.last
-                        if let weather = weatherInfo?["main"] as? String {
-                            guard daysAndWeathers[day] != nil else {
-                                daysAndWeathers[day] = [weather: 1]
-                                continue
-                            }
-                            let rank = daysAndWeathers[day]![weather]
-                            daysAndWeathers[day]![weather] = (rank ?? 0) + 1
+            if let dateEpoch = item["dt"] as? Double {
+                let date = Date(timeIntervalSince1970: dateEpoch)
+                let day = dateFormatterOutput.string(from: date)
+                if let weatherInfoList = item["weather"] as? [[String: Any]] {
+                    let weatherInfo = weatherInfoList.last
+                    if let weather = weatherInfo?["main"] as? String {
+                        guard daysAndWeathers[day] != nil else {
+                            daysAndWeathers[day] = [weather: 1]
+                            continue
                         }
+                        let rank = daysAndWeathers[day]![weather]
+                        daysAndWeathers[day]![weather] = (rank ?? 0) + 1
                     }
                 }
             }
@@ -82,7 +78,8 @@ class MeteoService{
     }
     
     static func getForecast(long: Double,lat: Double) -> [String: String]? {
-        var result: [String: String]? = nil
+        var result: [String: String]? = ["Sunday": "Clouds", "Tuesday": "Clouds", "Saturday": "Clear", "Thursday": "Rain", "Friday": "Clouds", "Monday": "Clear"]
+        
         Alamofire.request("https://api.openweathermap.org/data/2.5/forecast?lat=\(lat)&lon=\(long)&APPID=16d6b1edb4636445686eb747a444bb7e")
             .responseJSON { response in
                 if let data = response.data, let _ = String(data: data, encoding: .utf8) {
