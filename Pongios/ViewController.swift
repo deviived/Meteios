@@ -11,6 +11,17 @@ import Alamofire
 import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate{
+    let WEATHER_IMG = [
+        "clear sky": "summer.png",
+        "few clouds": "cloud.png",
+        "scattered clouds": "cloud.png",
+        "broken clouds": "cloudy-night.png",
+        "shower rain": "rainy.png",
+        "rain": "rainy.png",
+        "thunderstorm": "lightning.png",
+        "snow": "snow",
+        "mist": "misty.png"
+    ]
     
     let locManager = CLLocationManager()
     var image: UIImage?
@@ -45,10 +56,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
                     
                     do {
                         let dict = try JSONSerialization.jsonObject(with: data, options: []) as? [String:AnyObject]
-                        
                         if let myDictionary = dict
                         {
-                            // print(myDictionary);
                             if let temp = myDictionary["main"]?["temp"] as? Double {
                                 let tempC = temp - 273.15
                                 self.temp.text = "\(Int(tempC))°C"
@@ -58,8 +67,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
                             }
                             
                             if let weather = myDictionary["weather"] as? [[String: Any]] {
+<<<<<<< HEAD
                                 if let weather_item = weather[0]["main"] as? String {
                                     print(weather_item)
+=======
+                                if let weather_item = weather[0]["description"] as? String {
+>>>>>>> ba9ad738375241416006530f5fb733d24a93afba
                                     var imgName = "summer.png"
                                     if let kExist = self.WEATHER_IMG[weather_item] {
                                         imgName = self.WEATHER_IMG[weather_item]!
@@ -95,6 +108,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
         alert.message = "Why do you do this ? Whyyyyyyyy ? \u{1F622}\u{1F622}\u{1F622}\u{1F622}"
         present(alert, animated: true) {
             DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                self.dismiss(animated: true, completion: nil)
                 guard let url = URL(string: UIApplication.openSettingsURLString) else {
                     return
                 }
