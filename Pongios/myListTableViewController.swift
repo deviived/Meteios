@@ -10,9 +10,12 @@ import UIKit
 
 class myListTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
+    var data: [String: String]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        data = MeteoService.getForecast(long: 1, lat: 2)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -26,10 +29,11 @@ class myListTableViewController: UIViewController, UITableViewDelegate, UITableV
         // #warning Incomplete implementation, return the number of sections
         return 1
     }*/
+    
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 2
+        return data?.count ?? 0
     }
 
     
@@ -41,7 +45,15 @@ class myListTableViewController: UIViewController, UITableViewDelegate, UITableV
         }
         */
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "smogo")
-        cell.textLabel?.text = "test"
+        var i = 0
+        for (key, value) in data! {
+            if indexPath.row == i {
+                cell.textLabel?.text = "\(key) - \(value)"
+            }
+            i = i + 1
+        }
+        print(indexPath)
+        //cell.textLabel?.text = data[]
         // Configure the cell...
 
         return cell
