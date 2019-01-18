@@ -11,6 +11,23 @@ import UIKit
 class myListTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
     var data: [String: String]?
+    var image: UIImage?
+    let WEATHER_IMG = [
+        "Rain": "rainy.png",
+        "Clouds": "cloud.png",
+        "Thunderstorm": "lightning.png",
+        "Snow": "snow.png",
+        "Drizzle": "misty.png"
+    ]
+    let LANG_FR = [
+        "Monday": "Lundi",
+        "Tuesday": "Mardi",
+        "Wesnesday": "Mercredi",
+        "Thursday": "Jeudi",
+        "Friday": "Vendredi",
+        "Saturday": "Samedi",
+        "Sunday": "Dimanche"
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +65,16 @@ class myListTableViewController: UIViewController, UITableViewDelegate, UITableV
         var i = 0
         for (key, value) in data! {
             if indexPath.row == i {
-                cell.textLabel?.text = "\(key) - \(value)"
+                if let weather_item = value as? String {
+                    var imgName = "summer.png"
+                    if let _ = self.WEATHER_IMG[weather_item] {
+                        imgName = self.WEATHER_IMG[weather_item]!
+                    }
+                    self.image = UIImage(named: imgName)
+                    cell.imageView?.image = self.image
+                    
+                }
+                cell.textLabel?.text = "\(key)"
             }
             i = i + 1
         }

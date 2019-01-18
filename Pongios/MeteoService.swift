@@ -78,7 +78,7 @@ class MeteoService{
     }
     
     static func getForecast(long: Double,lat: Double) -> [String: String]? {
-        var result: [String: String]? = ["Sunday": "Clouds", "Tuesday": "Clouds", "Saturday": "Clear", "Thursday": "Rain", "Friday": "Clouds", "Monday": "Clear"]
+        var result: [String: String]? = ["Lundi": "Clouds", "Mardi": "Clouds", "Mercredi": "Clear", "Jeudi": "Rain", "Vendredi": "Clouds", "Samedi": "Clear"]
         
         Alamofire.request("https://api.openweathermap.org/data/2.5/forecast?lat=\(lat)&lon=\(long)&APPID=16d6b1edb4636445686eb747a444bb7e")
             .responseJSON { response in
